@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "998399403158",
+    "project_id": "poc-ms-rn-analytics",
+    "storage_bucket": "poc-ms-rn-analytics.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998399403158:android:119dcf86f3f977bb304eb7",
+        "android_client_info": {
+          "package_name": "com.msanalytics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998399403158-urfq1grvjv98hd9qgnp81qj48npumu6p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.msanalytics",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "998399403158-8dalqqghr1tdjo26gc0kjsph1s14f5mn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7QnhsZZJaGoqbjAMX63nSRjg-PgwE7nU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998399403158-8dalqqghr1tdjo26gc0kjsph1s14f5mn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "998399403158-tol3r15blscdhibgb1js5nsef6oag8pc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.msAnalytics"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998399403158:android:07e2ba6726e0185c304eb7",
+        "android_client_info": {
+          "package_name": "com.msanalytics.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998399403158-hapnl00pjvv7qpb09va9oggndc74l0kc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.msanalytics.dev",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "998399403158-8dalqqghr1tdjo26gc0kjsph1s14f5mn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7QnhsZZJaGoqbjAMX63nSRjg-PgwE7nU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998399403158-8dalqqghr1tdjo26gc0kjsph1s14f5mn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "998399403158-tol3r15blscdhibgb1js5nsef6oag8pc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.msAnalytics"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
