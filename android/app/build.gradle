@@ -14,6 +14,23 @@ apply plugin: 'com.google.gms.google-services'
 import com.android.build.OutputFile
 import org.apache.tools.ant.taskdefs.condition.Os
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '7.3.3'
+}
+
+task prepareKotlinBuildScriptModel {
+}
+
+/**CONFIG TO CHANGES ENVITOMENTS **/
+def app_name = "msAnalytics"
+def environment = (System.getenv('ENV') ?: 'dev');
+def version_code = (System.getenv('BUILD_NUMBER')?: 1).toInteger();
+def version_name = System.getenv('TAG_NUMBER') ?: '1.0.0';
+def suffix = "."+environment;
+def isCI = System.getenv('CI') == 'yes';
+
+
+
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
  * and bundleReleaseJsAndAssets).
@@ -140,7 +157,7 @@ def reactNativeArchitectures() {
     return value ? value.split(",") : ["armeabi-v7a", "x86", "x86_64", "arm64-v8a"]
 }
 
-def app_name = "msanalytics"
+
 // def environment = (System.getenv("ENV") ?: "dev").toLowerCase()
 // def suffix = "."+environment
 
@@ -248,14 +265,22 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
-
+            resValue 'string', 'app_name', app_name+'-'+environment
+            applicationIdSuffix suffix
         }
         release {
-            // Caution! In production, you need to generate your own keystore file.
-            // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
-            minifyEnabled enableProguardInReleaseBuilds
-            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            // // Caution! In production, you need to generate your own keystore file.
+            // // see https://reactnative.dev/docs/signed-apk-android.
+            // signingConfig signingConfigs.debug
+            // minifyEnabled enableProguardInReleaseBuilds
+            // proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+
+            if(environment != null && environment != 'prod'){
+                resValue "string", "app_name", version_name+'-'+environment
+                applicationIdSuffix suffix
+            }else{
+                resValue 'string', 'app_name', app_name
+            }
 
 
         }
